@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">黄豆而已</string>
+    <string name="dry_bean" translatable="false">😄</string>
+    <string name="wet_bean" translatable="false">😅</string>
+    <string name="score_name">分数</string>
+    <string name="title">文明上网，从使用脱水黄豆开始😄👍</string>
+</resources>
