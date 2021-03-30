@@ -3,5 +3,14 @@
     <string name="dry_bean" translatable="false">😄</string>
     <string name="wet_bean" translatable="false">😅</string>
     <string name="score_name">分数</string>
-    <string name="title">文明上网，从使用脱水黄豆开始😄👍</string>
+    <string name="title">文明上网 从使用脱水黄豆开始😄👍</string>
+    <string name="enough_is_enough">差不多得了😅</string>
+    <string name="credit">致谢名单</string>
+    <string name="about">关于</string>
+    <string name="ok">差不多得了😅</string>
+    <string name="about_message">完全由安卓自带组件做出来的小游戏（\n\nGitHub在こ↑こ↓：\nhttps://github.com/manoil/Just-Bean\n代码非常差不多得了\n欢迎前来观摩屎山</string>
+    <string name="about_title">关于 黄豆而已</string>
+    <string name="credit_title">本项目的诞生离不开这些项目：</string>
+    <string name="credit_message" translatable="false">\nTwemoji: \nhttps://github.com/twitter/twemoji\n</string>
+
 </resources>

@@ -1,15 +1,19 @@
 package com.oilman.justbean;
 
-public class Score {
-    static int score;
+import android.util.Log;
 
-    public Score() {
-        score = 0;
-    }
-    public Score(int inScore) {
-        score = inScore;
-    }
+import static com.oilman.justbean.ValueHolder.logTagD;
+
+/**
+ * The class to store the score
+ * @author Oilman
+ * @since 0.0.1
+ */
+public class Score {
+    static int score = -1;
+
     public static int addScore() {
+        Log.d(logTagD,  "score is " + score);
         return ++score;
     }
 
@@ -18,7 +22,7 @@ public class Score {
         return score;
     }
 
-    public static int getScore() {
+    public static int getInt() {
         return score;
     }
 
@@ -26,5 +30,8 @@ public class Score {
         return String.valueOf(score);
     }
 
+    public static void setScore(int score) {
+        Score.score = score;
+    }
 
 }

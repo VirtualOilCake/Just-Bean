@@ -2,5 +2,12 @@
 <resources>
     <string name="app_name">Just Beans</string>
     <string name="score_name">Score</string>
-    <string name="title">Healthy life starts with dry beans 😄👍</string>
+    <string name="title">Healthy life starts from dry beans 😄👍</string>
+    <string name="enough_is_enough">Enough is enough😅</string>
+    <string name="credit">Credit</string>
+    <string name="about">About</string>
+    <string name="ok">OK</string>
+    <string name="about_message">A game made from Android builtin APIs.\n\nSource code goes here:\nhttps://github.com/manoil/Just-Bean\nThe codes are very lame,\nbut welcome for peer-reviews.</string>
+    <string name="about_title">About Just Bean</string>
+    <string name="credit_title">This project is made possible by the following:</string>
 </resources>
