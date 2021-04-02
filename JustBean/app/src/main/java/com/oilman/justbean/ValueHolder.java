@@ -15,8 +15,11 @@ public class ValueHolder {
     //The height the emoji will jump in percentage
     public final static float jumpHeightRange = 0.7F;
 
-    //How many times it is possible for the emoji to rotate.
+    //How long the emoji will jump
     public static int uppingTime = 500;
+
+    //How long the emoji needs to drop
+    public static int downTime = 1000;
 
     public final static int rotationRange = 2;
 

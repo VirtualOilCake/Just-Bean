@@ -107,7 +107,7 @@
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:text="@string/title"
-        android:textSize="24sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/scoreCardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

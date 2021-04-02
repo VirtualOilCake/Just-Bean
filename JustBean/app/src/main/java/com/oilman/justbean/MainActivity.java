@@ -30,6 +30,7 @@ import static com.oilman.justbean.ValueHolder.baseJumpHeight;
 import static com.oilman.justbean.ValueHolder.clickNumber;
 import static com.oilman.justbean.ValueHolder.clickTimerStarted;
 import static com.oilman.justbean.ValueHolder.dataName;
+import static com.oilman.justbean.ValueHolder.downTime;
 import static com.oilman.justbean.ValueHolder.easterEggClicks;
 import static com.oilman.justbean.ValueHolder.easterEggTime;
 import static com.oilman.justbean.ValueHolder.jumpHeightRange;
@@ -78,9 +79,7 @@ public class MainActivity extends AppCompatActivity {
         scoreTextView = findViewById(R.id.scoreTextView);
         buttonConstrainLayout = findViewById(R.id.buttonConstranLayOut);
 
-
         scoreTextView.setText(Score.getString());
-
 
         emojiButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,24 +94,26 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     scoreTextView.startAnimation(new ZoomAndShrink(1.1F));
                 }
-
-                addScore();//Update "Score.score" and "score_data" file
-                scoreTextView.setText(Score.getString());
-                buttonConstrainLayout.startAnimation(getJumpAnimationSet());
+                addScore();// Update "Score.score" and "score_data" file
+                scoreTextView.setText(Score.getString());// Update the text
+                buttonConstrainLayout.startAnimation(getJumpAnimationSet());// Start the jump animation
             }
         });
 
-
+        // Easter egg
         easterEggButton.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ShowToast")
             @Override
             public void onClick(View v) {
                 Log.v(logTagV, "Click num: " + clickNumber);
+                // If the button has been clicked for enough times in a given time
                 if (clickNumber >= easterEggClicks) {
                     Log.d(logTagD, "You got the easter egg!");
-                    Toast.makeText(MainActivity.this, getString(R.string.enough_is_enough), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, getString(R.string.enough_is_enough), Toast.LENGTH_SHORT).show();// Make a toast
                     clickNumber = 0;
-                } else {
+                }
+                // Else add the click number, and start a timer if there is no timer
+                else {
                     clickNumber++;
                     if (!clickTimerStarted) {
                         Log.v(logTagV, "New timer");
@@ -162,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
 
         float thisJumpHeight = baseJumpHeight - random.nextFloat() * jumpHeightRange;
         Log.v(logTagV, "this time the height is: " + thisJumpHeight);
-
+        // The going up animation
         TranslateAnimation translateAnimationUp = new TranslateAnimation(
                 Animation.RELATIVE_TO_PARENT,
                 0F,
@@ -176,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
         translateAnimationUp.setDuration(uppingTime);
         translateAnimationUp.setInterpolator(new PathInterpolator(0.0001F, 1F));
         translateAnimationUp.setFillAfter(true);
-
+        // The going down animation
         TranslateAnimation translateAnimationDown = new TranslateAnimation(
                 Animation.RELATIVE_TO_PARENT,
                 0F,
@@ -187,18 +188,18 @@ public class MainActivity extends AppCompatActivity {
                 Animation.RELATIVE_TO_PARENT,
                 -thisJumpHeight
         );
-        translateAnimationDown.setDuration(1000);
+        translateAnimationDown.setDuration(downTime);
         translateAnimationDown.setStartOffset(uppingTime);
         translateAnimationDown.setInterpolator(new android.view.animation.BounceInterpolator());
-
+        // The empty animation
         RotateAnimation emptyAnimation = new RotateAnimation(0F, 0F);
         emptyAnimation.setDuration(ValueHolder.baseWetTime + random.nextInt(ValueHolder.wetTimeRange));
-
+        emptyAnimation.setStartOffset(uppingTime + downTime);
+        // Add the animation to the animation set
         jump.addAnimation(translateAnimationUp);
         jump.addAnimation(translateAnimationDown);
         jump.addAnimation(emptyAnimation);
-
-
+        // The animation listener
         jump.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -279,7 +280,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_item_about:
                 Log.v(logTagV, "you clicked about");
                 View aboutView = View.inflate(MainActivity.this, R.layout.about_view, null);
-                TextView aboutTextView =  aboutView.findViewById(R.id.aboutTextView);
+                TextView aboutTextView = aboutView.findViewById(R.id.aboutTextView);
                 aboutTextView.setMovementMethod(LinkMovementMethod.getInstance());
                 AlertDialog aboutDialog = new AlertDialog.Builder(this)
                         .setTitle(R.string.about_title)
@@ -288,7 +289,7 @@ public class MainActivity extends AppCompatActivity {
                         .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Log.v(logTagV,"Clicked the OK button");
+                                Log.v(logTagV, "Clicked the OK button");
                             }
                         })
                         .create();
@@ -305,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
                         .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Log.v(logTagV,"Clicked the OK button");
+                                Log.v(logTagV, "Clicked the OK button");
                             }
                         })
                         .create();

@@ -11,7 +11,7 @@ android {
             keyPassword '123456'
         }
         release {
-            storeFile file('C:\\Users\\angli4\\AndroidStudioProjects\\JustBean\\key\\password_is_123456.jks')
+            storeFile file('D:\\Developments\\Git\\Just-Bean\\JustBean\\key\\password_is_123456.jks')
             storePassword '123456'
             keyAlias 'key0'
             keyPassword '123456'
