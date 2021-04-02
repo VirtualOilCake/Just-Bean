@@ -3,6 +3,20 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        Oilman {
+            storeFile file('C:\\Users\\angli4\\AndroidStudioProjects\\JustBean\\key\\password_is_123456.jks')
+            storePassword '123456'
+            keyAlias '123456'
+            keyPassword '123456'
+        }
+        release {
+            storeFile file('C:\\Users\\angli4\\AndroidStudioProjects\\JustBean\\key\\password_is_123456.jks')
+            storePassword '123456'
+            keyAlias 'key0'
+            keyPassword '123456'
+        }
+    }
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
@@ -11,9 +25,10 @@ android {
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
-        versionName '0.1.0'
+        versionName '0.2.0'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
     }
 
     buildTypes {

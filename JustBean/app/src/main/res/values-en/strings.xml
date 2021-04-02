@@ -7,7 +7,7 @@
     <string name="credit">Credit</string>
     <string name="about">About</string>
     <string name="ok">OK</string>
-    <string name="about_message">A game made from Android builtin APIs.\n\nSource code goes here:\nhttps://github.com/manoil/Just-Bean\nThe codes are very lame,\nbut welcome for peer-reviews.</string>
+    <string name="about_message">This is a game made by Android builtin APIs.\n\nSource code goes here:\nhttps://github.com/manoil/Just-Bean\nThe codes are very lame,\nbut welcome for peer-reviews.</string>
     <string name="about_title">About Just Bean</string>
     <string name="credit_title">This project is made possible by the following:</string>
 </resources>
