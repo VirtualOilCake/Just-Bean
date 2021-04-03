@@ -75,16 +75,17 @@
 
             <Button
                 android:id="@+id/emojiButton"
-                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/black"
+                android:background="@android:color/transparent"
                 android:backgroundTint="@android:color/transparent"
                 android:clickable="true"
                 android:focusable="true"
-                android:gravity="bottom"
+                android:fontFamily="@font/twemoji_a"
+                android:gravity="center"
                 android:hapticFeedbackEnabled="true"
-                android:padding="0dp"
+                android:padding="16dp"
                 android:shadowColor="@android:color/transparent"
                 android:text="@string/wet_bean"
                 android:textSize="100sp"
@@ -94,9 +95,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:rippleColor="@color/yellow"
-                app:shapeAppearance="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+                app:rippleColor="@android:color/transparent"
                 tools:text="@string/wet_bean" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

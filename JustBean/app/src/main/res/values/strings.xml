@@ -11,6 +11,6 @@
     <string name="about_message">完全由安卓自带组件做出来的小游戏（\n\nGitHub在こ↑こ↓：\nhttps://github.com/manoil/Just-Bean\n代码非常差不多得了\n欢迎前来观摩屎山</string>
     <string name="about_title">关于 黄豆而已</string>
     <string name="credit_title">本项目的诞生离不开这些项目：</string>
-    <string name="credit_message" translatable="false">\nTwemoji: \nhttps://github.com/twitter/twemoji\n</string>
+    <string name="credit_message" translatable="false">Twemoji: \nhttps://github.com/twitter/twemoji\n\ntwemoji-android:\nhttps://github.com/ingrinder/twemoji-android</string>
 
 </resources>
