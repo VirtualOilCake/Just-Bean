@@ -34,7 +34,7 @@ class RandomRotationAnimation extends AnimationSet {
         super(false);
         Random random = new Random();
         int turn = random.nextInt(3) - 1;//Should be -1, 0, or 1
-        int toDegree = 360 * random.nextInt(rotationRange+1) * turn;
+        int toDegree = 360 * random.nextInt(rotationRange + 1) * turn;
         Log.v(logTagV, "This rotation is " + toDegree + " degree");
         RotateAnimation rotateAnimation = new RotateAnimation(
                 0,
