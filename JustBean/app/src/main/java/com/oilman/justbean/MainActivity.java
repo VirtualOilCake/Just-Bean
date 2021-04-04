@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             Score.setScore(scoreInData);
         }
 
-        timer = new Timer();
+        timer = new Timer();// Timer for the Easter egg
 
         /*
          * Bundling the GUI
@@ -205,12 +205,14 @@ public class MainActivity extends AppCompatActivity {
             public void onAnimationStart(Animation animation) {
                 emojiButton.setClickable(false);
                 dryUp();
+                //Add rotation animation to the button
                 emojiButton.startAnimation(new RandomRotationAnimation());
                 Log.v(logTagV, "Jumping!");
             }
 
             @Override
             public void onAnimationEnd(Animation animation) {
+                //Get back to normal
                 emojiButton.setClickable(true);
                 getWet();
                 Log.v(logTagV, "It is wet");
@@ -277,6 +279,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
+            // If clicked about menu
             case R.id.menu_item_about:
                 Log.v(logTagV, "you clicked about");
                 View aboutView = View.inflate(MainActivity.this, R.layout.about_view, null);
@@ -295,6 +298,7 @@ public class MainActivity extends AppCompatActivity {
                         .create();
                 aboutDialog.show();
                 break;
+            // If clicked credit menu
             case R.id.menu_item_credit:
                 Log.v(logTagV, "menu_item_credit");
                 View creditView = View.inflate(MainActivity.this, R.layout.credit_view, null);

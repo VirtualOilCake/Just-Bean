@@ -91,6 +91,7 @@ class ZoomAndShrink extends AnimationSet {
 
     /**
      * @param zoomSize how big the view will get
+     * @since 0.2.0
      */
     public ZoomAndShrink(float zoomSize) {
         super(false);
