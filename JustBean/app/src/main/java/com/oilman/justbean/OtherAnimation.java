@@ -33,8 +33,8 @@ class RandomRotationAnimation extends AnimationSet {
     public RandomRotationAnimation() {
         super(false);
         Random random = new Random();
-        int turn = random.nextInt(3) - 1;//Should be -1, 0, or 1
-        int toDegree = 360 * random.nextInt(rotationRange + 1) * turn;
+        int turns = random.nextInt(3) - 1;//Should be -1, 0, or 1
+        int toDegree = 360 * random.nextInt(rotationRange + 1) * turns;
         Log.v(logTagV, "This rotation is " + toDegree + " degree");
         RotateAnimation rotateAnimation = new RotateAnimation(
                 0,
@@ -89,7 +89,7 @@ class ZoomAndShrink extends AnimationSet {
         this.addAnimation(shrink);
     }
 
-    /**
+    /**a
      * @param zoomSize how big the view will get
      * @since 0.2.0
      */
